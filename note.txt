@@ -1,0 +1,5 @@
+color gradient:
+NAVBAR
+
+1. #184EA3
+2. #114087

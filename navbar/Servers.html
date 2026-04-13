@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nove</title>
+    <link rel="stylesheet" href="../css.css">
+</head>
+<body>
+    <nav class="novebar2">
+        <img src="../keith1-3-12-2025 (1).png">
+        <a href="https://discord.gg/B7uTa5uzAa">Join now!</a>
+    </nav>
+    <nav class="novbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/navbar/Servers.html">Servers</a></li>
+            <li><a href="/navbar/Help.html">Help</a></li>
+            <li><a href="/navbar/Credits.html">Credits</a></li>
+        </ul>
+    </nav>
+
+    <div class="roadblocks">
+        <h1>Servers</h1>
+    </div>
+
+    <div class="novetus"  id="serve">
+    </div>
+</div>
+
+</body>
+<script>
+    main();
+
+    async function main() {
+        const rand = await getData();
+
+        const ipUl = document.querySelector("#serve")
+
+        for (const ipp of rand) {
+            ipUl.innerHTML += `    <div onclick="redir()" class="server">
+        <a><img src="${ipp.img}">
+          <h4>${ipp.name}</h4>
+        <h5>${ipp.Owner}</h5></a>
+    </div>`;
+        }
+
+    }
+
+    async function getData () {
+        const res = await fetch("servers.json");
+        const data = await res.json();
+
+        return data;
+    }
+
+    function redir() {
+        location.replace("serverjoin.html")
+    }
+
+</script>
+</html>

@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../.vscode"
+		},
+		{
+			"path": "../gameimg"
+		},
+		{
+			"path": "../navbar"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Nover",
+		"liveServer.settings.port": 5501
+	}
+}
