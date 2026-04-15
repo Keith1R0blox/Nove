@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="../css.css">
 </head>
 <body>
-    <nav class="novebar2">
+    <nav class="navbartop">
         <img src="../keith1-3-12-2025 (1).png">
         <a href="https://discord.gg/B7uTa5uzAa">Join now!</a>
     </nav>
-    <nav class="novbar">
+    <nav class="navbar">
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="/navbar/Servers.html">Servers</a></li>
@@ -22,10 +22,26 @@
             <li><a href="/navbar/Credits.html">Credits</a></li>
         </ul>
     </nav>
-    <div class="sudo">
-            <div class="game">
+    <div class="sudo" id="serverr">
+</div>
+
+
+</div>
+
+</body>
+<script>
+
+        main();
+
+    async function main() {
+        const rand = await getData();
+
+        const ipUl = document.querySelector("#serverr")
+
+        for (const ipp of rand) {
+            ipUl.innerHTML += `            <div class="game">
         <a>
-        <h1>Town of Robloxia</h1>
+        <h1>${ipp.name}</h1>
         <img src="../gameimg/TOR.jpg"> 
         </a>
     </div>
@@ -42,36 +58,21 @@
     </div>
     <hr style="width:740px;text-align:left;margin-top:150px;margin-right:150px">
     <h2>Description</h2>
-    <a>novenove</a>
-</div>
-
-
-</div>
-
-</body>
-<script>
-    main();
-
-    async function main() {
-        const rand = await getData();
-
-        const ipUl = document.querySelector("#serve")
-
-        for (const ipp of rand) {
-            ipUl.innerHTML += `    <div class="server">
-        <a><img src="${ipp.img}">
-          <h4>${ipp.name}</h4>
-        <h5>${ipp.Owner}</h5></a>
-    </div>`;
+    <a>novenove</a>`;
         }
 
     }
 
-    async function getData () {
-        const res = await fetch("servers.json");
-        const data = await res.json();
 
-        return data;
+
+    async function getData () {
+        const res = localStorage.getItem("json");
+        console.log(JSON.stringify(res));
+        console.log(JSON.parse(res));
+
+        return res;
     }
+
+
 </script>
 </html>

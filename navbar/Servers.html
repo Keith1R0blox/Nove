@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="../css.css">
 </head>
 <body>
-    <nav class="novebar2">
+    <nav class="navbartop">
         <img src="../keith1-3-12-2025 (1).png">
         <a href="https://discord.gg/B7uTa5uzAa">Join now!</a>
     </nav>
-    <nav class="novbar">
+    <nav class="navbar">
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="/navbar/Servers.html">Servers</a></li>
@@ -23,11 +23,11 @@
         </ul>
     </nav>
 
-    <div class="roadblocks">
+    <div class="blackbar">
         <h1>Servers</h1>
     </div>
 
-    <div class="novetus"  id="serve">
+    <div class="mainblackbarcontent"  id="serve">
     </div>
 </div>
 
@@ -41,7 +41,7 @@
         const ipUl = document.querySelector("#serve")
 
         for (const ipp of rand) {
-            ipUl.innerHTML += `    <div onclick="redir()" class="server">
+            ipUl.innerHTML += `    <div onclick="redir(this.id)" class="server" id="{'name': '${ipp.name}', 'Owner': '${ipp.Owner}', 'img':'${ipp.img}'}">
         <a><img src="${ipp.img}">
           <h4>${ipp.name}</h4>
         <h5>${ipp.Owner}</h5></a>
@@ -57,9 +57,16 @@
         return data;
     }
 
-    function redir() {
-        location.replace("serverjoin.html")
-    }
+  function redir(clicked_id)
+  {
+        console.log(clicked_id);
+        return clicked_id.toString();
+        console.log(clicked_id)
+
+  }
+
+
+
 
 </script>
 </html>
