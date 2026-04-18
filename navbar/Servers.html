@@ -41,7 +41,7 @@
         const ipUl = document.querySelector("#serve")
 
         for (const ipp of rand) {
-            ipUl.innerHTML += `    <div onclick="redir(this.id)" class="server" id="{'name': '${ipp.name}', 'Owner': '${ipp.Owner}', 'img':'${ipp.img}'}">
+            ipUl.innerHTML += `    <div onclick="redir(this.id)" class="servers" id="${ipp.name}&v2=${ipp.Owner}&v3=${ipp.img}&v4=${ipp.desc}&v5=${ipp.NS}&v6=${ipp.ver}&v7=${ipp.IP}">
         <a><img src="${ipp.img}">
           <h4>${ipp.name}</h4>
         <h5>${ipp.Owner}</h5></a>
@@ -51,19 +51,27 @@
     }
 
     async function getData () {
-        const res = await fetch("servers.json");
+        const res = await fetch("Servers.json");
         const data = await res.json();
 
         return data;
     }
 
-  function redir(clicked_id)
-  {
-        console.log(clicked_id);
-        return clicked_id.toString();
-        console.log(clicked_id)
+    function redir(clicked_id)
+    {
+         console.log(clicked_id);
 
-  }
+    const keywords = [clicked_id]
+
+    const params = new URLSearchParams();
+
+    params.append('v1', JSON.stringify(keywords));
+
+    const query2 = params.toString();
+    location.replace("serverjoin.html?v1=" + keywords);
+    console.log(query2);
+    }
+
 
 
 

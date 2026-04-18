@@ -7,16 +7,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nove</title>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="../../css.css">
 </head>
 <body>
     <nav class="navbartop">
-        <img src="keith1-3-12-2025 (1).png">
+        <img src="../../keith1-3-12-2025 (1).png">
         <a href="https://discord.gg/B7uTa5uzAa">Join now!</a>
     </nav>
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="/navbar/Servers.html">Servers</a></li>
             <li><a href="/navbar/Help.html">Help</a></li>
             <li><a href="/navbar/Credits.html">Credits</a></li>
@@ -24,22 +24,38 @@
     </nav>
 
     <div class="blackbar">
-        <h1>Welcome!</h1>
-    </div>
-    <div class="mainblackbarcontent">
-<a>Welcome to Nove! <br>
-This is a place where you can find mainblackbarcontent Servers that we hosted! <br>
-Note: do not join using Novetus 1.3, please use Novetus Snapshot <br>
-</a> 
+        <h1>URI setup</h1>
     </div>
 
-    <div class="blackbar">
-        <h1>News</h1>
+    <div class="mainblackbarcontent"  id="serve">
+    </div>
 </div>
-<div class="mainblackbarcontent">
-    <a>Welcome to our site! We have now switched to a new UI just recently (April 19th, 2026) instead of the old UI made by AI. If you still somehow want to see the old site, you can by visiting:</a>
-</div>
+
 </body>
 <script>
+    main();
+
+    async function main() {
+        const rand = await getData();
+
+        const ipUl = document.querySelector("#serve")
+
+        for (const ipp of rand) {
+            ipUl.innerHTML += `    <div  class="servers"">
+        <a><img src="${ipp.img}">
+          <h4>${ipp.name}</h4>
+          <h5>${ipp.name2}</h5></a>
+    </div>`;
+        }
+
+    }
+
+    async function getData () {
+        const res = await fetch("URI.json");
+        const data = await res.json();
+
+        return data;
+    }
+
 </script>
 </html>

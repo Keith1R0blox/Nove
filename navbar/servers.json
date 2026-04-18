@@ -1,9 +1,9 @@
 [
     {
-   "name": "Town of Robloxia", "Owner": "Keith1Roblox", "img":"../gameimg/TOR.jpg"
+   "name": "Town of Robloxia", "Owner": "Keith1Roblox", "img":"../gameimg/TOR.jpg", "desc": "wow this is so cool", "ver": "2012M", "NS": "mtxappz.us.net", "IP": "123.123.12.123:34542"
     },
     {
-   "name": "TOR", "Owner": "Keith1", "img":"../gameimg/TOR.jpg"
+   "name": "TOR", "Owner": "Keith1", "img":"../gameimg/TOR.jpg", "id": "2"
     }
 
 

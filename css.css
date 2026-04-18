@@ -168,7 +168,7 @@ body{
 }
 
 
-.server {
+.servers {
     padding: 0;
     display: flex;
     justify-content: center;
@@ -179,23 +179,26 @@ body{
     cursor: pointer;
 }
 
-.server img{
+.servers img{
     height: 68%;
+    width: 200px;
     display: block;
     margin: 0 auto;
     margin-left: -0.5%;
+    object-fit: cover;
 }
 
-.server h4{
+.servers h4{
     display: block;
     margin: 0 auto;
     color: #1C64C6;
 }
 
-.server h5{
+.servers h5{
     height: 68%;
     display: block;
     margin: 0 auto;
+    white-space: nowrap;
 }
 
 .game {

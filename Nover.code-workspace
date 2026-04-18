@@ -14,7 +14,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Nover",
-		"liveServer.settings.port": 5501
+		"liveservers.settings.multiRootWorkspaceName": "Nover",
+		"liveservers.settings.port": 5501
 	}
 }

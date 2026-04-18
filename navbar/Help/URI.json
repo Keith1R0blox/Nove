@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Step 1:", "name2": "Open Novetus Snapshot as Adminstrator", "img": "URIimg/step1.png"
+    },
+
+    {
+        "name": "Step 2:", "name2": "Click on 'Install URI'", "img": "URIimg/step2.png"
+    },
+    {
+        "name": "Step 3:", "name2": "Click on 'Run' (if you've recieved the message)", "img": "URIimg/step3.png"
+    },
+    {
+        "name": "Step 4:", "name2": "Click on 'Install URI and UserAgent'", "img": "URIimg/step4.png"
+    }
+]
