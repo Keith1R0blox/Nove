@@ -41,7 +41,7 @@
         for (const ipp of rand) {
             ipUl.innerHTML += `            <div class="game">
         <a>
-        <h1>${name1}</h1>
+        <h1 id="urlid">${name1}</h1>
         <img src="${img1}"> 
         </a>
     </div>
@@ -93,7 +93,7 @@
     const NS1 = urlParams.get('v5');
     const ver1 = urlParams.get('v6');
     const ip1 = urlParams.get('v7');
-    
+
 // ip
 
 function copyServerInfo() {
@@ -169,5 +169,26 @@ function copyServerInfo() {
   document.head.appendChild(cryptoJsScript);
 })();
 console.log("[Novetus Hook] UserScript ran!");
+
+// URL shortener
+
+
+
+        document.addEventListener('keydown', function (event) {
+            let myDiv = document.getElementById('myDiv');
+
+            if (event.ctrlKey && (event.key === 'c' 
+            || event.key === 'C')) {
+                alert('URL copied!');
+                const copyURL1 = document.getElementById("urlid").innerText;
+                const URLfilter = 
+                copyURL1.replace(/ |/g, '');
+
+                navigator.clipboard.writeText("[novenovetus.xyz/" + URLfilter + '](' + window.location.href + ")")
+
+                console.log(URLfilter)
+            }
+        });
+
 </script>
 </html>

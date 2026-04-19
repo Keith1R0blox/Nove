@@ -1,10 +1,24 @@
 [
     {
-   "name": "Town of Robloxia", "Owner": "Keith1Roblox", "img":"../gameimg/TOR.jpg", "desc": "wow this is so cool", "ver": "2012M", "NS": "mtxappz.us.net", "IP": "123.123.12.123:34542"
+   "name": "Keith's server!", "Owner": "Keith1Roblox", "img":"../gameimg/keithsserver.png", "desc": "Welcome to Keith's server! the most epic city ever!", "ver": "2010L", "NS": "us.mxtappz.net:10009", "IP": "99.89.78.253:10009"
     },
     {
-   "name": "TOR", "Owner": "Keith1", "img":"../gameimg/TOR.jpg", "id": "2"
+   "name": "Town of Robloxia", "Owner": "Keith1Roblox", "img":"../gameimg/TOR.jpg", "desc": "very fun game", "ver": "2012M", "NS": "us.mxtappz.net:10005", "IP": "99.89.78.253:10005"
+    },
+    {
+   "name": "OBBY TO MARRY JANE GOLFING!", "Owner": "maksim_maksimovich.", "img":"../gameimg/janegolfing.png", "desc": "Oh noes john 🎳 goez to marriage with jan ⛳ and u wan to marry her instead and u ned to beat uhh i forgot how much levels sorry and take eliminate john bowl (u can't lollolololololol)", "ver": "2010L", "NS": "us.mxtappz.net:10000", "IP": "99.89.78.253:10000"
+    },
+    {
+   "name": "Can you survive a train crash?", "Owner": "captin_kitten", "img":"../gameimg/traincrash.png", "desc": "Can you survive when the train takes a wrong turn and falls off a cliff?", "ver": "2010L", "NS": "us.mxtappz.net:10001", "IP": "99.89.78.253:10001"
+    },
+    {
+   "name": "Laser Tag [SHOP]", "Owner": "monke_tgg", "img":"../gameimg/lasertag.png", "desc": "In addition to the new security updates, mobile users can now use the Burst and Auto gun as they were intended to be used. I am going to implement the new Control Points gamemode soon.", "ver": "2012M", "NS": "us.mxtappz.net:10002", "IP": "99.89.78.253:10002"
+    },
+    {
+   "name": "Rise of the Killbots - Crossroads", "Owner": "MundoPixel", "img":"../gameimg/killbots.png", "desc": "(none)", "ver": "2012M", "NS": "us.mxtappz.net:10002", "IP": "99.89.78.253:10002"
+    },
+    {
+   "name": "Doomspire Brickbattle", "Owner": "MundoPixel", "img":"../gameimg/doomspire.png", "desc": "(none)", "ver": "2010L", "NS": "us.mxtappz.net:10004", "IP": "99.89.78.253:10004"
     }
-
 
 ]
