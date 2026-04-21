@@ -21,6 +21,7 @@
             <li><a href="/navbar/Servers.html">Servers</a></li>
             <li><a href="/navbar/Help.html">Help</a></li>
             <li><a href="/navbar/Credits.html">Credits</a></li>
+             
         </ul>
     </nav>
     <div class="sudo" id="serversr">
@@ -42,7 +43,7 @@
         for (const ipp of rand) {
             ipUl.innerHTML += `            <div class="game">
         <a>
-        <h1 id="urlid">${name1}</h1>
+        <h1>${name1}</h1>
         <img src="${img1}"> 
         </a>
     </div>
@@ -55,7 +56,7 @@
         <button class="play" onclick="copyServerInfo(true)">Play</button>
         <br></br>
         <a>Version: ${ver1}</a>
-        <p>IP: ${NS1}</p>
+        <p id="ipid">IP: ${NS1}</p>
     </div>
     <hr style="width:740px;text-align:left;margin-top:150px;margin-right:150px">
     <h2>Description</h2>
@@ -170,26 +171,6 @@ function copyServerInfo() {
   document.head.appendChild(cryptoJsScript);
 })();
 console.log("[Novetus Hook] UserScript ran!");
-
-// URL shortener
-
-
-
-        document.addEventListener('keydown', function (event) {
-            let myDiv = document.getElementById('myDiv');
-
-            if (event.ctrlKey && (event.key === 'c' 
-            || event.key === 'C')) {
-                alert('URL copied!');
-                const copyURL1 = document.getElementById("urlid").innerText;
-                const URLfilter = 
-                copyURL1.replace(/ |/g, '');
-
-                navigator.clipboard.writeText("[novenovetus.xyz/" + URLfilter + '](' + window.location.href + ")")
-
-                console.log(URLfilter)
-            }
-        });
 
 </script>
 </html>

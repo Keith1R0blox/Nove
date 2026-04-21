@@ -169,6 +169,11 @@ body{
     font-weight: lighter;
 }
 
+.mainblackbarcontent input {
+    margin-top: 18px;
+    margin-left: 20px;
+}
+
 
 .servers {
     padding: 0;
