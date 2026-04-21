@@ -216,8 +216,6 @@ body{
     list-style-type: none;
     margin-right: 0 auto;
     width: 28.5%;
-    border-style: solid;
-    border-width: 2px;
     text-align: justify;
 }
 
@@ -251,8 +249,6 @@ body{
     justify-content: center;
     color: white;
     width: 150px;
-    border-style: solid;
-    border-width: 2px;
     margin-left: 510px;
     margin-top: -290px;
     text-align: justify;
@@ -286,8 +282,6 @@ body{
     list-style-type: none;
     margin: 0 auto;
     width: 40%;
-    border-style: solid;
-    border-width: 2px;
     text-align: justify;
     margin-left: 30%;
 }
