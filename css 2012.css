@@ -1,0 +1,328 @@
+@font-face {
+    font-family: SegoeUI;
+    src:
+        local("Segoe UI Bold"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff2) format("woff2"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff) format("woff"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.ttf) format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: SegoeUI-semilight;
+    src:
+        local("Segoe UI Semilight"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff2) format("woff2"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff) format("woff"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf) format("truetype");
+    font-weight: 200;
+}
+
+
+
+.navbar ul{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+    list-style-type: none;
+    height: 30px;
+    margin-top: auto;
+    margin: 0px;
+  
+    background: linear-gradient(to bottom, #4882CA, #345F92);
+}
+
+.novlog{
+    width: 11%;
+    height: auto;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-family: Arial;
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+.navbartop{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: block;
+    text-align: left;
+    background: #1E4183;
+    height: 10px;
+    position: flex;
+}
+
+.navbartop img{
+    display: flex;
+    margin-top: -15px;
+    margin-left: 70px;
+    height: 40px;
+    width: 170px;
+}
+
+.navbartop a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: block;
+    text-align: right;
+    font-family: Arial;
+    font-weight: 600;
+    margin-top: -42px;
+    margin-right: 120px;
+}
+
+body{
+    margin: 0;
+}
+
+.blackbar {
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    color: white;
+    list-style-type: none;
+    height: 50px;
+    margin: 0 auto;
+    width: 60.3%;
+    background: linear-gradient(to bottom, #4B4B4B, #282828);
+    margin-top: 100px;
+    clip-path: polygon(97% 0, 100% 45%, 100% 100%, 0 100%, 0 0);
+}
+
+.blackbar h1{
+    margin-top: 5px;
+    font-family: Arial;
+    margin-left: 10px;
+}
+
+.mainblackbarcontent {
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    color: white;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 60.1%;
+    background: linear-gradient(to bottom, #E5E5E5, #FFFFFF);
+    border-color: #AAAAAA;
+    border-style: solid;
+    border-width: 2px;
+    text-align: justify;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: flex;
+
+}
+
+.mainblackbarcontent h1{
+    margin-top: 5px;
+    font-family: Arial;
+    margin-left: 10px;
+}
+
+.slash {
+    border-style: dashed;
+    border-color: #AAAAAA;
+    border-width: 2px;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    width: 26%;
+}
+
+.mainblackbarcontent a {
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    margin-left: 1%;
+    white-space: wrap;
+    align-content: center;
+}
+
+.mainblackbarcontent h1 {
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    margin-left: 1%;
+    white-space: normal;
+}
+
+.mainblackbarcontent b {
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    margin-left: 1%;
+    white-space: normal;
+}
+
+.mainblackbarcontent h5 {
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    margin-left: 1%;
+    white-space: normal;
+    font-weight: lighter;
+}
+
+.mainblackbarcontent input {
+    margin-top: 18px;
+    margin-left: 20px;
+}
+
+
+.servers {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+    list-style-type: none;
+    height: 50%;
+    margin-left: 20px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.servers img{
+    height: 100px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-left: -0.5%;
+    object-fit: cover;
+}
+
+.servers h4{
+    display: block;
+    margin: 0 auto;
+    color: #1C64C6;
+}
+
+.servers h5{
+    display: block;
+    margin: 0 auto;
+    white-space: initial;
+}
+
+.game {
+    padding: 0;
+    display: flex;
+    justify-content: flex;
+    color: transparent;
+    list-style-type: none;
+    margin-right: 0 auto;
+    width: 28.5%;
+    border-style: solid;
+    border-width: 2px;
+    text-align: justify;
+    border-color: transparent;
+}
+
+.game h1 {
+    font-family: SegoeUI;
+    font-weight: 400;
+    color: black;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: start;
+}
+
+.game a {
+    font-family:  SegoeUI;
+    color: black;
+    white-space: normal;
+}
+
+.game img {
+    height: 281px;
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    margin-left: -0.5%;
+    object-fit: cover;
+    
+}
+
+.game2 {
+    padding: 0;
+    justify-content: center;
+    color: white;
+    width: 150px;
+    border-style: solid;
+    border-width: 2px;
+    margin-left: 510px;
+    margin-top: -290px;
+    text-align: justify;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-color: transparent;
+}
+
+.game2 a{
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    white-space: normal;
+    font-size: small;
+}
+
+.game2 p{
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    white-space: normal;
+    margin-top: auto;
+    font-size: small;
+}
+
+.game2 hr{
+    width: 150%
+}
+
+.sudo {
+    display: absolute;
+    justify-content: left;
+    color: transparent;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 40%;
+    border-style: solid;
+    border-width: 2px;
+    text-align: justify;
+    margin-left: 30%;
+    border-color: transparent;
+}
+
+.play {
+    background: linear-gradient(to bottom, #00AB00, #155F17);
+    width: 100%;
+    height: 12%;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    border-color: #155F17;
+    border-width: 1px;
+    box-shadow: 0px 0px 2px #155F17;
+    margin-left: 25%;
+    cursor: pointer;
+}
+
+.desc{
+    width: 50px;
+    margin-right: 100px;
+}
+
+.sudo h2{
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    white-space: normal;
+    margin-top: auto;
+}
+
+.sudo a{
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    white-space: normal;
+    margin-top: auto;
+}
