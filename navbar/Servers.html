@@ -43,7 +43,7 @@
         const ipUl = document.querySelector("#serve")
 
         for (const ipp of rand) {
-            ipUl.innerHTML += `    <div onclick="redir(this.id)" class="servers" id="${ipp.name}&v2=${ipp.Owner}&v3=${ipp.img}&v4=${ipp.desc}&v5=${ipp.NS}&v6=${ipp.ver}&v7=${ipp.IP}">
+            ipUl.innerHTML += `    <div onclick="redir(this.id)" class="servers" id="${ipp.name}">
         <a><img src="${ipp.img}">
           <h4>${ipp.name}</h4>
         <h5>${ipp.Owner}</h5></a>
