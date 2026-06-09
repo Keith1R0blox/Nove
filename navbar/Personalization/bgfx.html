@@ -7,17 +7,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nove</title>
-    <link rel="stylesheet" href="../css.css">
-    <link rel="icon" href="../image.png">
+    <link rel="stylesheet" href="../../css.css">
+    <link rel="icon" href="../../image.png">
 </head>
 <body>
     <nav class="navbartop">
-        <img src="../keith1-3-12-2025 (1).png">
+        <img src="../../keith1-3-12-2025 (1).png">
         <a href="https://discord.gg/B7uTa5uzAa">Join now!</a>
     </nav>
     <nav class="navbar">
         <ul>
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="../../index.html">Home</a></li>
             <li><a href="/navbar/Servers.html">Servers</a></li>
             <li><a href="/navbar/Help.html">Help</a></li>
             <li><a href="/navbar/Credits.html">Credits</a></li>
@@ -44,7 +44,7 @@
         const ipUl = document.querySelector("#serve")
 
         for (const ipp of rand) {
-            ipUl.innerHTML += `    <div onclick="redir(this.id)" class="servers" id="${ipp.href}">
+            ipUl.innerHTML += `    <div onclick="redir(this.id)" onclick="${ipp.onclick}" class="servers" id="${ipp.href}">
         <a><img src="${ipp.img}">
           <h4>${ipp.name}</h4>
         <h5>${ipp.name2}</h5></a>
@@ -54,7 +54,7 @@
     }
 
     async function getData () {
-        const res = await fetch("../navbarjson/Personalization.json");
+        const res = await fetch("../../navbarjson/BackgroundEffects.json");
         const data = await res.json();
 
         return data;
@@ -62,17 +62,21 @@
 
     function redir(clicked_id)
     {
-         console.log(clicked_id);
+		console.log(clicked_id);
+		console.log("clicked button, let's see if this works")
 
-    const keywords = [clicked_id]
+		const keywords = [clicked_id]
 
-    const params = new URLSearchParams();
+		const params = new URLSearchParams();
 
-    params.append('v1', JSON.stringify(keywords));
-
-    const query2 = params.toString();
-    location.replace(keywords);
-    console.log(query2);
+		params.append('v1', JSON.stringify(keywords));
+		if (clicked_id.href == "undefined") {
+			// i gotta put a comment here i think idk
+		} else {
+			const query2 = params.toString();
+			location.replace(keywords);
+			console.log(query2);
+		}
     }
 </script>
 </html>
