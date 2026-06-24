@@ -3,6 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="../default.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,73 +21,103 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="/navbar/Servers.html">Servers</a></li>
             <li><a href="/navbar/Help.html">Help</a></li>
+            <li><a href="/navbar/Extras.html">Extras</a></li>
             <li><a href="/navbar/Credits.html">Credits</a></li>
              
         </ul>
     </nav>
+    <div class="Box">
+        
+    </div>
     <div class="sudo" id="serversr">
-</div>
-
-
 </div>
 
 </body>
 <script>
 
-        main();
+	main();
 
-    async function main() {
-        const rand = await getData();
+	async function main() {
+		const rand = await getData();
+		// quality of code drops here as it's written by norstorian
+		const sinf = await getServerData();
+		let cso = null; // WHY DO YOU HAVE TO INITILISE VARIABLES IN JS??? LET ME SET IT TO NOTHING. IDC ABOUT MEMORY SAFETY
+		console.log(sinf);
+		for (const cjo of sinf) {
+			if (cjo.name == urlParams.get("v1")) {
+				cso = cjo;
+			}
+		}
+		if (cso == null) {
+			cso = [
+				{
+					"name": "you've been lied to", "Owner": "no one", "img":"http://www.pngall.com/question-mark-png/download/30074", "desc": "this server is FAKE", "ver": "1802E", "NS": "localhost:57", "IP": "localhost:57"
+				}
+			]
+		}
+		const name1 = cso.name;
+		const owner1 = cso.Owner;
+		const img1 = cso.img;
+		const desc1 = cso.desc;
+		const NS1 = cso.NS;
+		const ip1 = cso.ip;
+		const ver1 = cso.ver;
+		// quality should be fixed
+		const ipUl = document.querySelector("#serversr")
 
-        const ipUl = document.querySelector("#serversr")
+		for (const ipp of rand) {
+			ipUl.innerHTML += `            <div class="game">
+		<a>
+		<h1>${name1}</h1>
+		<img src="${img1}"> 
+		</a>
+	</div>
+	<div class="game2">
+		<a>
+			<a>Suggested by:</a>
+			<p>${owner1}</p>
+		</a>
+		<hr>
+		<button class="play" onclick="copyServerInfo(true)">Play</button>
+		<br></br>
+		<a>Version: ${ver1}</a>
+		<p id="ipid">IP: ${NS1}</p>
+	</div>
+	<hr style="width:740px;text-align:left;margin-top:150px;margin-right:150px">
+	<h2>Description</h2>
+	<a>${desc1}</a>`;
+		}
 
-        for (const ipp of rand) {
-            ipUl.innerHTML += `            <div class="game">
-        <a>
-        <h1>${name1}</h1>
-        <img src="${img1}"> 
-        </a>
-    </div>
-    <div class="game2">
-        <a>
-            <a>Suggested by:</a>
-            <p>${owner1}</p>
-        </a>
-        <hr>
-        <button class="play" onclick="copyServerInfo(true)">Play</button>
-        <br></br>
-        <a>Version: ${ver1}</a>
-        <p id="ipid">IP: ${NS1}</p>
-    </div>
-    <hr style="width:740px;text-align:left;margin-top:150px;margin-right:150px">
-    <h2>Description</h2>
-    <a>${desc1}</a>`;
-        }
+	}
 
-    }
+	async function getData () {
+		const res = await fetch("../navbarjson/YesThisFileJustKeepsTheServerJoinPageAs1Section.json");
+		const data = await res.json();
+		return data;
+	}
 
-    async function getData () {
-        const res = await fetch("../navbarjson/YesThisFileJustKeepsTheServerJoinPageAs1Section.json");
+	async function getServerData() {
+        const res = await fetch("../navbarjson/servers.json");
         const data = await res.json();
         return data;
     }
 
-    const url = window.location.href;
+	const url = window.location.href;
 
-    const searchParams = new URL(url).searchParams;
+	const searchParams = new URL(url).searchParams;
 
-    const entries = new URLSearchParams(searchParams).entries()
+	const entries = new URLSearchParams(searchParams).entries()
 
-    const array = Array.from(entries);
+	const array = Array.from(entries);
 
-    console.log(array)
+	console.log(array)
 
-    let name = document.getElementById("name");
+	let name = document.getElementById("name");
 
-    const myKeysValues = window.location.search;
-    console.log("keys and values:", myKeysValues)
+	const myKeysValues = window.location.search;
+	console.log("keys and values:", myKeysValues)
 
-    const urlParams = new URLSearchParams(myKeysValues);
+	const urlParams = new URLSearchParams(myKeysValues);
 
     const name1 = urlParams.get('v1');
     const owner1 = urlParams.get('v2');

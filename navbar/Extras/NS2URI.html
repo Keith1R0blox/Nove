@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="../../default.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nove</title>
+    <link rel="stylesheet" href="../../../css.css">
+    <link rel="icon" href="../../image.png">
+</head>
+<body>
+    <nav class="navbartop">
+        <img src="../../keith1-3-12-2025 (1).png">
+        <a href="https://discord.gg/B7uTa5uzAa">Join now!</a>
+    </nav>
+    <div class="Box">
+        
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Servers.html">Servers</a></li>
+            <li><a href="../Help.html">Help</a></li>
+            <li><a href="../Extras.html">Extras</a></li>
+            <li><a href="../Credits.html">Credits</a></li>
+        </ul>
+    </nav>
+
+    <div class="blackbar">
+        <h1>Novetus server to URI</h1>
+    </div>
+
+    <div class="mainblackbarcontent">
+        <div class="blackboxcontent">
+            <h1>input:</h1>
+        </div>
+        <div class="blackboxcontent">
+        <form action="#" id="form" class="formcss">
+        <label for="IP">Server IP</label>
+        <input placeholder="Ex: 147.185.221.26:24964" id="IP"></input>
+        <br></br>
+        <label for="V">Client Version</label>
+        <input id="V" placeholder="Ex: 2012M"></input>
+        <button id="convert" class="submitbutton" type="submit" onclick="launchGame()">Convert</button>
+        </form>
+        </div>
+        <div class="blackboxcontent">
+            <h1>output:</h1>
+        </div>
+        <div class="URIoutput">
+            <a id="result"></a>
+        </div>
+        <div class="blackboxcontent">
+            <button class="submitbutton" onclick="copy()">Copy</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script>
+let form = document.getElementById("form");
+
+let output2 = document.getElementById("result");
+
+async function launchGame() {
+
+        let IP = document.getElementById("IP").value;
+        let ver = document.getElementById("V").value;
+        console.log(ver);
+        console.log(IP)
+
+        let ip = IP;
+        ip = ip.replace("IP: ", "");
+        const keyBytes = [1, 2, 3, 4, 5, 6, 7, 8];
+        const ivBytes = [1, 2, 3, 4, 5, 6, 7, 8];
+        const cryptoJsScript = document.createElement('script');
+        cryptoJsScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js';
+        cryptoJsScript.onload = async () => {
+            const match = ip.split(":"); // ideally, the string should only contain it once, if not bad things will happen. however this is a rushed feature so i dont care
+            if (match) {
+                const ip = match[0];
+                const port = match[1];
+                const clientVersion = ver;
+                function encodeDES(str) {
+                    const key = CryptoJS.enc.Hex.parse(keyBytes.map(b => b.toString(16).padStart(2, '0')).join(''));
+                    const iv = CryptoJS.enc.Hex.parse(ivBytes.map(b => b.toString(16).padStart(2, '0')).join(''));
+                    const encrypted = CryptoJS.DES.encrypt(
+                        CryptoJS.enc.Utf16LE.parse(str),
+                        key,
+                        {
+                            iv: iv,
+                            mode: CryptoJS.mode.CBC,
+                            padding: CryptoJS.pad.Pkcs7
+                        }
+                    );
+                    return encrypted.toString();
+                }
+                const arr = [
+                    encodeDES(ip),
+                    encodeDES(port),
+                    encodeDES(clientVersion)
+                ];
+                const joined = arr.join('|');
+                const base64encoded = btoa(joined);
+                const finalUri = `novetus://${base64encoded}`;
+                const output = document.getElementById("result")
+                output.innerHTML = finalUri;
+            }
+        }
+        document.head.appendChild(cryptoJsScript);
+    }
+   
+async function copy() {
+    await navigator.clipboard.writeText(output2.innerHTML);
+    console.log(output2.innerHTML)
+} 
+
+</script>
+</html>

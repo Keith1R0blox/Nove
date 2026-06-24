@@ -3,6 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="../default.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,14 +21,17 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="/navbar/Servers.html">Servers</a></li>
             <li><a href="/navbar/Help.html">Help</a></li>
-            <li><a href="/navbar/Credits.html">Credits</a></li>
+            <li><a href="/navbar/Extras.html">Extras</a></li>
             <li><a href="/navbar/Credits.html">Credits</a></li>
              
         </ul>
     </nav>
+    <div class="Box">
+        
+    </div>
 
     <div class="blackbar">
-        <h1>Personalizations</h1>
+        <h1>Extras</h1>
     </div>
 
     <div class="mainblackbarcontent"  id="serve">
@@ -54,13 +58,13 @@
     }
 
     async function getData () {
-        const res = await fetch("../navbarjson/Personalization.json");
+        const res = await fetch("../navbarjson/Extras.json");
         const data = await res.json();
 
         return data;
     }
 
-    function redir(clicked_id)
+        function redir(clicked_id)
     {
          console.log(clicked_id);
 
@@ -74,5 +78,6 @@
     location.replace(keywords);
     console.log(query2);
     }
+
 </script>
 </html>

@@ -145,6 +145,7 @@ body{
     margin-left: 1%;
     white-space: wrap;
     align-content: center;
+    text-overflow: ellipsis;
 }
 
 .mainblackbarcontent h1 {
@@ -170,8 +171,9 @@ body{
 }
 
 .mainblackbarcontent input {
-    margin-top: 18px;
-    margin-left: 20px;
+    margin-top: 40px;
+    margin-left: -132px;
+    margin: 10px;
 }
 
 
@@ -244,7 +246,6 @@ body{
     margin: 0 auto;
     margin-left: -0.5%;
     object-fit: cover;
-    
 }
 
 .game2 {
@@ -309,7 +310,6 @@ body{
 }
 
 .desc{
-    width: 50px;
     margin-right: 100px;
 }
 
@@ -325,4 +325,88 @@ body{
     color: black;
     white-space: normal;
     margin-top: auto;
+}
+
+.submitbutton {
+    margin: 10px;
+    background-color: #F5CD30;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold
+}
+
+.output {
+    margin-top: 40px;
+    margin-right: 100px;
+}
+
+.blackboxcontent {
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    color: white;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 100%;
+    background: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-width: 2px;
+    text-align: justify;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: flex;
+
+}
+
+.blackboxcontent h1{
+    margin-top: 5px;
+    font-family: Arial;
+    margin-left: 10px;
+}
+
+.blackboxcontent a {
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    margin-left: 1%;
+    white-space: wrap;
+    align-content: center;
+}
+
+.blackboxcontent h1 {
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    margin-left: 1%;
+    white-space: normal;
+}
+
+.blackboxcontent b {
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    margin-left: 1%;
+    white-space: normal;
+}
+
+.blackboxcontent h5 {
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    margin-left: 1%;
+    white-space: normal;
+    font-weight: lighter;
+}
+
+.blackboxcontent input {
+    margin-top: 40px;
+    margin-left: -132px;
+    margin: 10px;
+}
+.URIoutput {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.formcss {
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 15px
 }
