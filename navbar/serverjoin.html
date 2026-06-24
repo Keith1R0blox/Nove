@@ -5,13 +5,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <script src="../default.js"></script>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nove</title>
-    <link rel="stylesheet" href="../css.css">
-    <link rel="icon" href="../image.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nove</title>
+	<link rel="stylesheet" href="../css.css">
+	<link rel="icon" href="../image.png">
 </head>
 <body>
+<<<<<<< HEAD
     <nav class="navbartop">
         <img src="../keith1-3-12-2025 (1).png">
         <a href="https://discord.gg/B7uTa5uzAa">Join now!</a>
@@ -30,12 +31,32 @@
         
     </div>
     <div class="sudo" id="serversr">
+=======
+	<nav class="navbartop">
+		<img src="../keith1-3-12-2025 (1).png">
+		<a href="https://discord.gg/B7uTa5uzAa">Join now!</a>
+	</nav>
+	<nav class="navbar">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="/navbar/Servers.html">Servers</a></li>
+			<li><a href="/navbar/Help.html">Help</a></li>
+			<li><a href="/navbar/Credits.html">Credits</a></li>
+			 
+		</ul>
+	</nav>
+	<div class="sudo" id="serversr">
+>>>>>>> 8b1b380cf272afbc25c157d4f49b3abb1d40329e
 </div>
 
 </body>
 <script>
 
+<<<<<<< HEAD
 	main();
+=======
+		main();
+>>>>>>> 8b1b380cf272afbc25c157d4f49b3abb1d40329e
 
 	async function main() {
 		const rand = await getData();
@@ -116,6 +137,7 @@
 
 	const myKeysValues = window.location.search;
 	console.log("keys and values:", myKeysValues)
+<<<<<<< HEAD
 
 	const urlParams = new URLSearchParams(myKeysValues);
 
@@ -126,21 +148,38 @@
     const NS1 = urlParams.get('v5');
     const ver1 = urlParams.get('v6');
     const ip1 = urlParams.get('v7');
+=======
+>>>>>>> 8b1b380cf272afbc25c157d4f49b3abb1d40329e
 
+	const urlParams = new URLSearchParams(myKeysValues);
+	// ==========================================================================================
+	// = the below is old legacy code that stinks like shit and allows for cross-site scripting =
+	// = tl;dr: people can run whatever js they want                                            =
+	// = and has been confirmed (by me (Norstorian), and many others)                           =
+	// = idk what keith was on when writing this. please ignore it                              =
+	// ==========================================================================================
+	// keith i hope you die for using 2 space tabs
+	/*const name1 = urlParams.get('v1');
+	const owner1 = urlParams.get('v2');
+	const img1 = urlParams.get('v3');
+	const desc1 = urlParams.get('v4');
+	const NS1 = urlParams.get('v5');
+	const ver1 = urlParams.get('v6');
+	const ip1 = urlParams.get('v7');*/
 // ip
 
 function copyServerInfo() {
-    const serverInfo = ip1;
-    localStorage.setItem('novetus_should_launch', '1');
-    navigator.clipboard.writeText(serverInfo).catch(err => {
-        console.error('Failed to copy text: ', err);
-    });
+	const serverInfo = ip1;
+	localStorage.setItem('novetus_should_launch', '1');
+	navigator.clipboard.writeText(serverInfo).catch(err => {
+		console.error('Failed to copy text: ', err);
+	});
 }
 
 // tocat's URI system
 
 
-    // ==UserScript==
+	// ==UserScript==
 // @name         Nove autolauncher
 // @namespace    http://tampermonkey.net/
 // @version      1.0
@@ -150,56 +189,56 @@ function copyServerInfo() {
 // @grant        none
 // ==/UserScript==
 (() => {
-  'use strict';
-  const keyBytes = [1,2,3,4,5,6,7,8];
-  const ivBytes = [1,2,3,4,5,6,7,8];
-  const cryptoJsScript = document.createElement('script');
-  cryptoJsScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js';
-  cryptoJsScript.onload = () => {
-    const originalWriteText = navigator.clipboard.writeText.bind(navigator.clipboard);
-    navigator.clipboard.writeText = async function(text) {
-      try {
-        const match = text.match(/^(\d{1,3}(?:\.\d{1,3}){3}):(\d{1,5})$/);
-        // Only launch if the flag is set
-        const shouldLaunch = localStorage.getItem('novetus_should_launch') === '1';
-        if (match && shouldLaunch) {
-          localStorage.removeItem('novetus_should_launch');
-          const ip = match[1];
-          const port = match[2];
-          const clientVersion = document.body.innerText.match(/Version:\s*([^\s]+)/)?.[1] || "UnknownVersion";
-          function encodeDES(str) {
-            const key = CryptoJS.enc.Hex.parse(keyBytes.map(b => b.toString(16).padStart(2,'0')).join(''));
-            const iv = CryptoJS.enc.Hex.parse(ivBytes.map(b => b.toString(16).padStart(2,'0')).join(''));
-            const encrypted = CryptoJS.DES.encrypt(
-              CryptoJS.enc.Utf16LE.parse(str),
-              key,
-              {
-                iv: iv,
-                mode: CryptoJS.mode.CBC,
-                padding: CryptoJS.pad.Pkcs7
-              }
-            );
-            return encrypted.toString();
-          }
-          const arr = [
-            encodeDES(ip),
-            encodeDES(port),
-            encodeDES(clientVersion)
-          ];
-          const joined = arr.join('|');
-          const base64encoded = btoa(joined);
-          const finalUri = `novetus://${base64encoded}`;
-          await originalWriteText(finalUri);
-          window.location.href = finalUri;
-          return Promise.resolve();
-        }
-      } catch (e) {
-        console.error('[Novetus Hook] Error in writeText hook:', e);
-      }
-      return originalWriteText(text);
-    };
-  };
-  document.head.appendChild(cryptoJsScript);
+	'use strict';
+	const keyBytes = [1,2,3,4,5,6,7,8];
+	const ivBytes = [1,2,3,4,5,6,7,8];
+	const cryptoJsScript = document.createElement('script');
+	cryptoJsScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js';
+	cryptoJsScript.onload = () => {
+	const originalWriteText = navigator.clipboard.writeText.bind(navigator.clipboard);
+	navigator.clipboard.writeText = async function(text) {
+		try {
+		const match = text.match(/^(\d{1,3}(?:\.\d{1,3}){3}):(\d{1,5})$/);
+		// Only launch if the flag is set
+		const shouldLaunch = localStorage.getItem('novetus_should_launch') === '1';
+		if (match && shouldLaunch) {
+			localStorage.removeItem('novetus_should_launch');
+			const ip = match[1];
+			const port = match[2];
+			const clientVersion = document.body.innerText.match(/Version:\s*([^\s]+)/)?.[1] || "UnknownVersion";
+			function encodeDES(str) {
+			const key = CryptoJS.enc.Hex.parse(keyBytes.map(b => b.toString(16).padStart(2,'0')).join(''));
+			const iv = CryptoJS.enc.Hex.parse(ivBytes.map(b => b.toString(16).padStart(2,'0')).join(''));
+			const encrypted = CryptoJS.DES.encrypt(
+				CryptoJS.enc.Utf16LE.parse(str),
+				key,
+				{
+				iv: iv,
+				mode: CryptoJS.mode.CBC,
+				padding: CryptoJS.pad.Pkcs7
+				}
+			);
+			return encrypted.toString();
+			}
+			const arr = [
+			encodeDES(ip),
+			encodeDES(port),
+			encodeDES(clientVersion)
+			];
+			const joined = arr.join('|');
+			const base64encoded = btoa(joined);
+			const finalUri = `novetus://${base64encoded}`;
+			await originalWriteText(finalUri);
+			window.location.href = finalUri;
+			return Promise.resolve();
+		}
+		} catch (e) {
+		console.error('[Novetus Hook] Error in writeText hook:', e);
+		}
+		return originalWriteText(text);
+	};
+	};
+	document.head.appendChild(cryptoJsScript);
 })();
 console.log("[Novetus Hook] UserScript ran!");
 

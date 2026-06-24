@@ -1,0 +1,7 @@
+[
+    {
+   "name": "OBC 2016", "onclick": "document.body.style.backgroundImage = `url('../../PersonalizationAssets/backgrounds/obc_theme_2016_bg.png')`", "img":"../../PersonalizationAssets/backgrounds.jpg", "name2":"Customize background color, etc"
+    }
+
+
+]
