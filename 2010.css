@@ -44,7 +44,7 @@ body {
     justify-content: ce;
     color: white;
     list-style-type: none;
-    height: 1000px;
+    height: 1036px;
     margin: 0 auto;
     width: 920px;
     background: #E5F1FD;
@@ -263,26 +263,29 @@ body{
 }
 
 .game {
+    position: relative;
     padding: 0;
     display: flex;
     justify-content: flex;
     color: transparent;
     list-style-type: none;
     margin-right: 0 auto;
-    width: 28.5%;
+    width: 788px;
+    height: 30px;
     border-style: solid;
     border-width: 2px;
     text-align: justify;
     border-color: transparent;
+    margin-top: 30px;
 }
 
 .game h1 {
-    font-family: SegoeUI;
-    font-weight: 400;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
     color: black;
     white-space: normal;
     word-wrap: break-word;
     text-align: start;
+    margin-top: 3px;
 }
 
 .game a {
@@ -298,7 +301,7 @@ body{
     margin: 0 auto;
     margin-left: -0.5%;
     object-fit: cover;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 .game hr {
@@ -313,7 +316,7 @@ body{
     border-style: solid;
     border-width: 2px;
     margin-left: 540px;
-    margin-top: -283px;
+    margin-top: 35px;
     text-align: justify;
     flex-direction: row;
     flex-wrap: wrap;
@@ -374,21 +377,23 @@ body{
     border:none;
     width:250px;
     height:48px;
-    margin-top: 260px;
+    margin-top: 300px;
     margin-left: -544px;
     color: transparent;
 }
 
-.desc{
-    width: 50px;
-    margin-right: 100px;
-}
+
 
 .sudo h2{
     font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
     white-space: normal;
     margin-top: auto;
+    margin-top: -160px;
+    margin-left: 545px;
+    font-weight: normal;
+    font-size: 13px;
+    margin: 5px;
 }
 
 .sudo a{
@@ -397,6 +402,15 @@ body{
     white-space: normal;
     margin-top: auto;
 }
+
+.border {
+    margin-left: 540px;
+    margin-top: -3px;
+    width: 250px;
+    border: 1px dashed #555;
+    border-top: none;
+}
+
 
 .serverinfobar {
     padding: 0;
@@ -435,19 +449,6 @@ body{
     
 }
 
-.info2 {
-    margin-left: 540px;
-    font-size: 13px;
-    font-weight: lighter;
-    margin-bottom: 1px;
-    text-align: justify;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 250px;
-    border: 1px dashed black;
-    border-top: transparent;
-    margin-top: 2px;
-}
 
 .info2 a{
     font-size: 100%;
@@ -471,9 +472,17 @@ body{
 .desc {
     border: 1px #555555 solid;
     width: 230px;
-    margin-left: 4px;
-    margin-bottom: 4px;
+    margin-left: 545px;
+    margin-top: -100px;
     padding: 5px;
+    font-size: 12px;
+    margin: 5px;
+}
+
+
+/* MOVES THE DESC THING */
+.hrstyle {
+    display: none
 }
 
 
