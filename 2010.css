@@ -22,10 +22,16 @@
     font-family: comicsans;
     src: url('fonts/ComicSans.ttf');
 }
+
+
+
+
 body {
     background: linear-gradient(to bottom, #4882CA, #F8FCFF);
     min-height: 105.6vh;
     margin: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 
