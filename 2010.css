@@ -485,7 +485,71 @@ body{
     display: none
 }
 
+.theme {
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    color: white;
+    list-style-type: none;
+    height: 30px;
+    margin: 0 auto;
+    width: 96.2%;
+    background: #6E99C9;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-top: 10px
+}
 
+.theme a {
+    color: white
+}
+
+.maintheme {
+    padding: 0;
+    display: block;
+    justify-content: left;
+    color: white;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 95.7%;
+    background: white;
+    border-color: #6E99C9;
+    border-style: solid;
+    border-width: 2px;
+    text-align: justify;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: flex;
+    margin-left: 20px;
+}
+
+.maintheme a {
+    color: black;
+    margin-left: 1%;
+    white-space: wrap;
+    align-content: center;
+    text-overflow: ellipsis;
+}
+
+.maintheme p {
+    color: black;
+    margin-left: 1%;
+    white-space: wrap;
+    align-content: center;
+    text-overflow: ellipsis;
+    font-size: small;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.maintheme img {
+    width: 20%;
+    margin-left: 65%;
+    margin-top: -5%;
+}
+
+#section {
+    width: 100%;
+}
 
 
 

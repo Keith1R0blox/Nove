@@ -9,7 +9,6 @@
     <title>Nove</title>
     <link id="csss" rel="stylesheet" href="../../2012.css">
     <link rel="icon" href="../../image.png">
-    <script src="../../../style.js"></script>
 </head>
 <body>
     <nav class="navbartop">
@@ -53,9 +52,58 @@
         <a>Want to submit your own theme? <a href="https://discord.gg/KfwJyU9R7u">Start submitting your theme here!</a>
     </div>
 
+    <div class="blackbar">
+        <h1>User Themes</h1>
+    </div>
+    <div class="mainblackbarcontent">
+        <div id="section">
 
+        </div>
+    </div>
+
+    <script src="../../../style.js"></script>
 </body>
 <script>
+    main();
+
+    async function main() {
+        const rand = await getData();
+
+        const ipUl = document.querySelector("#section")
+
+        for (const ipp of rand) {
+            ipUl.innerHTML += `            <div class="theme">
+                <a>${ipp.name}</a>
+            </div>
+            <div class="maintheme">
+                <a>${ipp.desc}</a><br>
+                <p>Made by ${ipp.Owner}</p>
+                <button class="submitbutton applytheme" value="${ipp.repo}">Apply</button>
+                <img src="${ipp.img}">
+            </div>`;
+        }
+
+        const css = document.getElementById("csss")
+        document.querySelectorAll('.applytheme').forEach(button =>{
+            button.addEventListener("click", () => {
+                localStorage.setItem("style", button.value)
+                CSSuserapply(button.value)
+                csss.remove()
+            })
+        })
+
+    }
+
+    async function getData () {
+        const res = await fetch("../../navbarjson/themes.json");
+        const data = await res.json();
+
+        return data;
+    }
+
+
+
+    //themes apply
     const ver = document.getElementById('Ver');
     const button = document.getElementById('stylechange');
 
@@ -68,8 +116,10 @@
     })
 
 
-    ///logs the style from style.js
 
+
+
+    ///logs the style from style.js
     console.log(csstype)
 </script>
 </html>
