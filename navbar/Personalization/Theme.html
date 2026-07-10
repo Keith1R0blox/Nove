@@ -95,7 +95,7 @@
     }
 
     async function getData () {
-        const res = await fetch("../../navbarjson/themes.json");
+        const res = await fetch("https://raw.githubusercontent.com/Keith1R0blox/NoveCSSJSON/refs/heads/main/styles.json");
         const data = await res.json();
 
         return data;
