@@ -101,7 +101,7 @@
 	}
 
 	async function getServerData() {
-        const res = await fetch("../navbarjson/servers.json");
+        const res = await fetch("https://raw.githubusercontent.com/Keith1R0blox/NoveServerJSON/refs/heads/main/servers.json?token=GHSAT0AAAAAAEAWGV5J7E2IPRUNM6QM6IF22S5WGMA");
         const data = await res.json();
         return data;
     }
